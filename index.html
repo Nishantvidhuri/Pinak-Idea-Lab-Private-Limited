@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,8 @@
     <style>
         .background {
             position: relative;
-            height: 700px; /* Fill parent height */
-            overflow:hidden; /* Added overflow hidden */
+            height: 700px;
+            overflow: hidden;
         }
 
         .triangle-purple {
@@ -36,21 +37,16 @@
             background-color: #c1c4db; /* Light color */
             z-index: 0; /* Behind content */
         }
-
         .content {
             position: relative;
-            z-index: 2; /* Ensure content is above the triangles */
+            z-index: 2;
         }
 
         .heading {
-            position: relative;
-            z-index: 2; /* Ensure heading is above the triangles */
-            background-color: transparent; /* Make background transparent */
-            color: white; /* White text */
-            padding: 20px 40px; /* Increased padding for better visibility */
-            font-size: 3rem; /* Increased font size */
-            font-weight: bold; /* Bold text */
-            margin-bottom: 40px; /* Space below heading */
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 40px;
         }
 
         .service-card {
@@ -62,51 +58,44 @@
             transform: rotate(360deg);
         }
 
-        /* Apply card 2 properties to all cards */
-        .service-card .content {
-            transform: -translate-y-10;
-        }
-        
-        .service-card h3 {
-            font-weight: bold;
-        }
-        
-        .service-card p {
-            font-size: 1.25rem; /* Same font size as card 2 */
-            margin-top: 2.5rem;
-        }
-        
-        .service-card a {
-            font-size: 1.5rem; /* Adjust the size for links */
-        }
+        @media (max-width: 1024px) {
+            .heading {
+                font-size: 2rem;
+                text-align: center;
+            }
 
+            .service-card {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
-<body class="bg-gray-100">
 
+<body class="bg-gray-100">
     <div id="assignment" class="background py-10">
         <div class="triangle-purple"></div>
         <div class="triangle-light"></div>
-        
-        <h1 class="heading">OUR SERVICES</h1>
-        <div>
-            <div class="w-full flex gap-4 justify-between px-0 content">
+
+        <h1 class="heading text-center">OUR SERVICES</h1>
+
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 px-4 content">
                 <!-- Service Card 1 -->
-                <div class="ml-32 service-card p-6 bg-white transform text-center h3 w-1/4">
-                    <div class="transform -translate-y-16 icon mb-4">
+                <div class="service-card p-6 bg-white text-center">
+                    <div class="icon mb-4 transform -translate-y-14">
                         <img src="img1.webp" alt="Emergency Plumbing Services" class="w-20 h-20 mx-auto">
                     </div>
                     <div class="content transform -translate-y-10">
-                        <h3 class="text-xl font-bold">Emergency Plumbing Services</h3>
-                        <p class="text-gray-600 text-xl mt-10">
+                        <h3 class="text-xl font-semibold">Emergency Plumbing Services</h3>
+                        <p class="text-gray-600 mt-2">
                             Our plumbers are ready to go 24/7 for emergencies - including nights, weekends, and holidays.
                         </p>
-                        <a href="#" class="text-2xl text-purple-600 font-bold mt-4 block hover:underline">Explore This Service &gt;</a>
+                        <a href="#" class="text-xl text-purple-600 font-bold mt-4 block hover:underline">Explore This Service &gt;</a>
                     </div>
                 </div>
 
                 <!-- Service Card 2 -->
-                <div class="service-card p-6 bg-white text-center w-1/4">
+                <div class="service-card p-6 bg-white text-center">
                     <div class="icon mb-4 transform -translate-y-14">
                         <img src="img2.webp" alt="Plumbing and Drains" class="w-20 h-20 mx-auto">
                     </div>
@@ -120,30 +109,30 @@
                 </div>
 
                 <!-- Service Card 3 -->
-                <div class="service-card p-6 bg-white text-center w-1/4">
+                <div class="service-card p-6 bg-white text-center">
                     <div class="icon mb-4 transform -translate-y-14">
                         <img src="img3.png" alt="Water Damage" class="w-20 h-20 mx-auto">
                     </div>
                     <div class="content transform -translate-y-10">
-                        <h3 class="text-xl font-bold">Water Damage</h3>
-                        <p class="text-gray-600 text-xl mt-10">
+                        <h3 class="text-xl font-semibold">Water Damage</h3>
+                        <p class="text-gray-600 mt-2">
                             Our teams are equipped with state-of-the-art water extraction and cleanup equipment.
                         </p>
-                        <a href="#" class="text-2xl text-purple-600 font-bold mt-4 block hover:underline">Explore This Service &gt;</a>
+                        <a href="#" class="text-xl text-purple-600 font-bold mt-4 block hover:underline">Explore This Service &gt;</a>
                     </div>
                 </div>
 
                 <!-- Service Card 4 -->
-                <div class="mr-32 service-card p-6 bg-white text-center w-1/4">
+                <div class="service-card p-6 bg-white text-center">
                     <div class="icon mb-4 transform -translate-y-14">
                         <img src="img4.png" alt="Water Heaters" class="w-20 h-20 mx-auto">
                     </div>
                     <div class="content transform -translate-y-10">
-                        <h3 class="text-xl font-bold">Water Heaters</h3>
-                        <p class="text-gray-600 text-xl mt-10">
+                        <h3 class="text-xl font-semibold">Water Heaters</h3>
+                        <p class="text-gray-600 mt-2">
                             Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters.
                         </p>
-                        <a href="#" class="text-2xl text-purple-600 font-bold mt-4 block hover:underline">Explore This Service &gt;</a>
+                        <a href="#" class="text-xl text-purple-600 font-bold mt-4 block hover:underline">Explore This Service &gt;</a>
                     </div>
                 </div>
             </div>
@@ -152,4 +141,5 @@
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
